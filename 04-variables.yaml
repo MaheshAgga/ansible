@@ -1,4 +1,8 @@
-    course: "DevOps with AWS"
-    Trainee: "Sri Krishna"
-    Duration: "110HRS"
-
+- name: variables from PLAY level
+  hosts: localhost
+  vars_files:
+  - variables.yaml
+  tasks:
+  - name: check variables
+    ansible.builtin.debug:
+      msg: "HareKrishna, I am learning  {{course}},Trainee is {{Trainee}},Duration {{Duration}}"
