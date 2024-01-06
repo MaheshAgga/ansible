@@ -1,11 +1,11 @@
 - name: install and run nginx
   hosts: web
   tasks:
-    - name: Install nginx package
-        ansible.builtin.package:
-          name: nginx
-            state: present
-    - name: run nginx
-        ansible.builtin.service:
-          name: nginx
-            state: started
+    - name: Install ntpdate
+  ansible.builtin.package:
+    name: ntpdate
+    state: present
+    - name: Start service httpd, if not started
+  ansible.builtin.service:
+    name: httpd
+    state: started
