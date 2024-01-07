@@ -3,7 +3,8 @@
   tasks:
   - name: check robouser is exist or not
     ansible.builtin.command: id roboshop
-    register: user
+    register: user #variable
+    ignore_erros: true #ansible will not exist if we ge error
 
   - name: print variable value
     ansible.builtin.debug:
