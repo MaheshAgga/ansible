@@ -1,0 +1,31 @@
+- name: checking data types
+  hosts: localhost
+  vars:
+    NAME: SriKrishna
+    skills: #key 
+    - DevOps
+    - shell
+    - Linux
+    - Ansible
+    - Terraform
+    Experience: #Exp is map and it contains key , value pairs.
+      DevOps: 3 
+      Aws: 6
+      Docker: 2
+    Trainee: true
+  tasks:
+  - name: print key value pair
+    ansible.builtin.debug:
+      msg: "name: {{NAME}}"
+
+  - name: skills
+    ansible.builtin.debug:
+      msg: "skills: {{skills}}"
+
+  - name: print Experience
+    ansible.builtin.debug:
+      msg: "Experience: {{Experience}}"
+
+  - name: print Trainee
+    ansible.builtin.debug:
+      msg: "Trainee: {{Trainee}}"
