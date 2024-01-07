@@ -1,0 +1,11 @@
+- name: loops
+  hosts: localhost
+  tasks:
+  - name: print loops
+     ansible.builtin.debug:
+      msg: "HareKrishna {{item}}"
+    loop:
+    - Krishna
+    - Rama
+    - Shiva
+    - Bramha
